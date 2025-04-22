@@ -173,11 +173,6 @@
             height: 100%;
         }
         
-        .nav-links a.active {
-            background-color: rgba(233, 196, 106, 0.2);
-            color: var(--tan-accent);
-        }
-        
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -380,90 +375,38 @@
             min-width: 250px;
         }
         
-        .skill-list-simple {
-            list-style-type: none;
+        .skill-list {
+            list-style: none;
         }
         
-        .skill-list-simple li {
-            margin-bottom: 0.8rem;
-            font-size: 1.1rem;
-            padding: 0.5rem 1rem;
-            background-color: rgba(233, 196, 106, 0.1);
-            border-radius: 8px;
-            transition: transform 0.2s, background-color 0.2s;
-            border-left: 3px solid var(--cat-accent);
-            box-shadow: 2px 2px 5px rgba(67, 49, 48, 0.1);
+        .skill-list li {
+            margin-bottom: 1rem;
         }
         
-        .skill-list-simple li:hover {
-            transform: translateX(10px);
-            background-color: rgba(244, 162, 97, 0.15);
-            border-left: 3px solid var(--tan-accent);
-        }
-        
-        .paw-icon {
-            margin-right: 10px;
-            display: inline-block;
-        }
-        
-        .hero-content {
+        .skill-name {
             display: flex;
-            align-items: center;
             justify-content: space-between;
+            margin-bottom: 0.5rem;
+        }
+        
+        .progress-bar {
             width: 100%;
-        }
-        
-        .hero-text {
-            flex: 1;
-        }
-        
-        .hero-image {
-            flex: 0 0 auto;
-            margin-left: 2rem;
-        }
-        
-        .profile-picture {
-            width: 700px;
-            height: 800px;
-            border-radius: 50%;
+            height: 10px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 5px;
             overflow: hidden;
-            border: 8px solid var(--tan-accent);
-            box-shadow: 0 10px 20px rgba(67, 49, 48, 0.3);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            position: relative;
         }
         
-        .profile-picture::after {
-            content: "";
-            position: absolute;
-            top: -8px;
-            left: -8px;
-            right: -8px;
-            bottom: -8px;
-            border-radius: 50%;
-            border: 3px dashed var(--cat-accent);
-            animation: rotate 20s linear infinite;
-            pointer-events: none;
-        }
-        
-        @keyframes rotate {
-            from {
-                transform: rotate(0deg);
-            }
-            to {
-                transform: rotate(360deg);
-            }
-        }
-        
-        .profile-picture:hover {
-            transform: scale(1.05) rotate(3deg);
-            box-shadow: 0 15px 30px rgba(67, 49, 48, 0.4);
-        }
-        
-        .profile-picture img {
-            width: 100%;
+        .progress {
             height: 100%;
-            object-fit: cover;
+            background-color: var(--secondary-color);
+        }
+        
+        footer {
+            background-color: var(--darker-bg);
+            padding: 2rem 0;
+            text-align: center;
+            border-top: 5px solid rgba(255, 221, 148, 0.3);
         }
         
         .social-links {
@@ -484,93 +427,6 @@
             color: var(--secondary-color);
         }
         
-        footer {
-            background-color: var(--darker-bg);
-            padding: 2rem 0;
-            text-align: center;
-            border-top: 5px solid rgba(255, 221, 148, 0.3);
-        }
-        
-        /* Project detail page styles */
-        .project-detail {
-            padding: 3rem 0;
-        }
-        
-        .project-header {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-        
-        .project-detail-img {
-            width: 100%;
-            max-height: 500px;
-            object-fit: cover;
-            border-radius: 10px;
-            margin-bottom: 2rem;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-        }
-        
-        .project-detail-description {
-            margin-bottom: 2rem;
-        }
-        
-        .project-features {
-            margin-bottom: 2rem;
-        }
-        
-        .project-features ul {
-            list-style-position: inside;
-            margin-left: 1rem;
-        }
-        
-        .project-features li {
-            margin-bottom: 0.5rem;
-        }
-        
-        /* Resume page styles */
-        .resume-section {
-            margin-bottom: 3rem;
-        }
-        
-        .resume-item {
-            margin-bottom: 2rem;
-            padding: 1.5rem;
-            background-color: rgba(248, 225, 217, 0.1);
-            border-radius: 10px;
-            border-left: 4px solid var(--cat-accent);
-        }
-        
-        .resume-item h3 {
-            margin-bottom: 0.5rem;
-        }
-        
-        .resume-position {
-            font-weight: bold;
-            color: var(--cat-accent);
-            margin-bottom: 0.5rem;
-        }
-        
-        .resume-date {
-            font-style: italic;
-            margin-bottom: 1rem;
-            color: rgba(255, 245, 241, 0.8);
-        }
-        
-        .resume-description ul {
-            list-style-position: inside;
-            margin-left: 1rem;
-        }
-        
-        .resume-description li {
-            margin-bottom: 0.5rem;
-        }
-        
-        .download-resume {
-            text-align: center;
-            margin-top: 2rem;
-        }
-        
-        /* Responsive styles */
         @media (max-width: 768px) {
             .about-content {
                 flex-direction: column;
@@ -587,119 +443,37 @@
             .hero p {
                 font-size: 1.2rem;
             }
-            
-            .hero-content {
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            .hero-image {
-                margin-left: 0;
-                margin-top: 2rem;
-            }
-            
-            .profile-picture {
-                width: 350px;
-                height: 350px;
-            }
-            
-            .nav-links {
-                display: none;
-                flex-direction: column;
-                position: absolute;
-                top: 80px;
-                left: 0;
-                width: 100%;
-                background-color: var(--deep-orange);
-                padding: 1rem 0;
-                z-index: 1000;
-            }
-            
-            .nav-links.active {
-                display: flex;
-            }
-            
-            .nav-links li {
-                margin: 0.5rem 0;
-                width: 100%;
-                text-align: center;
-            }
-            
-            .menu-toggle {
-                display: block;
-                font-size: 1.5rem;
-                color: var(--text-light);
-                cursor: pointer;
-            }
-        }
-        
-        .nav-item {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-        
-        .nav-icon {
-            font-size: 1.2em;
-            transition: transform 0.3s ease;
-        }
-        
-        .nav-item:hover .nav-icon {
-            transform: scale(1.2);
-        }
-        
-        @media (max-width: 768px) {
-            .menu-toggle {
-                display: block;
-            }
-        }
-        
-        @media (min-width: 769px) {
-            .menu-toggle {
-                display: none;
-            }
         }
     </style>
-    <script>
-        // This function will be called when the DOM is loaded
-        document.addEventListener('DOMContentLoaded', function() {
-            // Get the current page path
-            const currentPath = window.location.pathname;
-            const navLinks = document.querySelectorAll('.nav-links a');
-            
-            // Add active class to current page link
-            navLinks.forEach(link => {
-                if (link.getAttribute('href') === currentPath || 
-                   (currentPath === '/' && link.getAttribute('href') === 'index.html')) {
-                    link.classList.add('active');
-                }
-            });
-            
-            // Mobile menu toggle
-            const menuToggle = document.querySelector('.menu-toggle');
-            const navMenu = document.querySelector('.nav-links');
-            
-            if (menuToggle) {
-                menuToggle.addEventListener('click', function() {
-                    navMenu.classList.toggle('active');
-                });
-            }
-        });
-    </script>
 </head>
 <body>
     <header>
         <nav>
             <div class="logo">Samantha Shomo's Portfolio</div>
-            <div class="menu-toggle">☰</div>
             <ul class="nav-links">
-                <li><a href="index.html" class="nav-item"><span class="nav-icon">🏠</span> Home</a></li>
-                <li><a href="about.html" class="nav-item"><span class="nav-icon">😺</span> About</a></li>
-                <li><a href="projects.html" class="nav-item"><span class="nav-icon">🎮</span> Projects</a></li>
-                <li><a href="skills.html" class="nav-item"><span class="nav-icon">💻</span> Skills</a></li>
-                <li><a href="resume.html" class="nav-item"><span class="nav-icon">📄</span> Resume</a></li>
-                <li><a href="contact.html" class="nav-item"><span class="nav-icon">📩</span> Contact</a></li>
+                <li><a href="#hero" class="nav-item"><span class="nav-icon">🏠</span> Home</a></li>
+                <li><a href="#about" class="nav-item"><span class="nav-icon">😺</span> About</a></li>
+                <li><a href="#projects" class="nav-item"><span class="nav-icon">🎮</span> Projects</a></li>
+                <li><a href="#skills" class="nav-item"><span class="nav-icon">💻</span> Skills</a></li>
+                <li><a href="#contact" class="nav-item"><span class="nav-icon">📩</span> Contact</a></li>
             </ul>
+            
+            <style>
+                .nav-item {
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+                }
+                
+                .nav-icon {
+                    font-size: 1.2em;
+                    transition: transform 0.3s ease;
+                }
+                
+                .nav-item:hover .nav-icon {
+                    transform: scale(1.2);
+                }
+            </style>
         </nav>
     </header>
     
@@ -708,7 +482,7 @@
             <div class="hero-text">
                 <h1>Samantha Shomo</h1>
                 <p>Game Programmer & Data Science with a <span style="color: var(--tan-accent);">purr</span>fect passion for creating immersive worlds</p>
-                <a href="projects.html" class="btn">View My Work</a>
+                <a href="#projects" class="btn">View My Work</a>
             </div>
             <div class="hero-image">
                 <div class="profile-picture">
@@ -716,11 +490,307 @@
                 </div>
             </div>
         </div>
+        
+        <style>
+            .hero-content {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+            }
+            
+            .hero-text {
+                flex: 1;
+            }
+            
+            .hero-image {
+                flex: 0 0 auto;
+                margin-left: 2rem;
+            }
+            
+            .profile-picture {
+                width: 700px;
+                height: 800px;
+                border-radius: 50%;
+                overflow: hidden;
+                border: 8px solid var(--tan-accent);
+                box-shadow: 0 10px 20px rgba(67, 49, 48, 0.3);
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+                position: relative;
+            }
+            
+            .profile-picture::after {
+                content: "";
+                position: absolute;
+                top: -8px;
+                left: -8px;
+                right: -8px;
+                bottom: -8px;
+                border-radius: 50%;
+                border: 3px dashed var(--cat-accent);
+                animation: rotate 20s linear infinite;
+                pointer-events: none;
+            }
+            
+            @keyframes rotate {
+                from {
+                    transform: rotate(0deg);
+                }
+                to {
+                    transform: rotate(360deg);
+                }
+            }
+            
+            .profile-picture:hover {
+                transform: scale(1.05) rotate(3deg);
+                box-shadow: 0 15px 30px rgba(67, 49, 48, 0.4);
+            }
+            
+            .profile-picture img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            
+            @media (max-width: 768px) {
+                .hero-content {
+                    flex-direction: column;
+                    text-align: center;
+                }
+                
+                .hero-image {
+                    margin-left: 0;
+                    margin-top: 2rem;
+                }
+            }
+        </style>
     </section>
     
+    <section id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <div class="about-img">
+                    <img src="/images/IMG_4201.JPG" alt="Developer portrait">
+                </div>
+                <div class="about-text">
+                    <p>Hello! I'm Samantha Shomo, a <span style="color: var(--tan-accent);">game programmer and data scientist</span> who graduated from Champlain College in 2025. I specialize in gameplay, networking, and AI programming, machine learning, and data privacy.</p>
+                    
+                    <p>temp</p>
+                    
+                    <p>temp <span style="color: var(--cat-accent);">temp</span> temp2</p>
+                    
+                    <p>temp</p>
+                    
+                    <a href="#contact" class="btn">Let's Connect</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="projects">
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="/images/shutterbudsart.png" alt="Project 1">
+                    </div>
+                    <div class="project-content">
+                        <h3>Shutterbuds</h3>
+                        <p> A four-player co-op photography game where you and your friends play as a group of magazine photographers fulfilling jobs from various magazines! To fulfill these jobs, your group of professionals must explore a wonderous national park, and take photos of landmarks and never before-seen creatures to build your cred!</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Unreal Engine</span>
+                            <span class="tech-tag">AI Programming</span>
+                            <span class="tech-tag">Confluence</span>
+                            <span class="tech-tag">Jira</span>
+                            <span class="tech-tag">Agile</span>
+                        </div>
+                        <a href="https://store.steampowered.com/app/3508060/shutterbuds/" class="btn" style="margin-top: 1rem;">View Project</a>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="/api/placeholder/400/200" alt="Project 2">
+                    </div>
+                    <div class="project-content">
+                        <h3>Cat-tum Breach</h3>
+                        <p>A sci-fi action RPG featuring feline protagonists where I served as the lead gameplay programmer, implementing cat-like movement systems, AI behavior trees for realistic cat behaviors, and quest logic.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Unreal Engine</span>
+                            <span class="tech-tag">C++</span>
+                            <span class="tech-tag">Blueprint</span>
+                            <span class="tech-tag">AI</span>
+                        </div>
+                        <a href="#" class="btn" style="margin-top: 1rem;">View Project</a>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="/api/placeholder/400/200" alt="Project 3">
+                    </div>
+                    <div class="project-content">
+                        <h3>Astral Cats</h3>
+                        <p>A custom physics library for space simulation games featuring cats in space! Includes realistic zero-gravity cat movement, orbital mechanics, and furry spacecraft dynamics.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">C#</span>
+                            <span class="tech-tag">Unity</span>
+                            <span class="tech-tag">Physics</span>
+                            <span class="tech-tag">Simulation</span>
+                        </div>
+                        <a href="#" class="btn" style="margin-top: 1rem;">View Project</a>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="/api/placeholder/400/200" alt="Project 4">
+                    </div>
+                    <div class="project-content">
+                        <h3>Catacombs Generator</h3>
+                        <p>An algorithm-driven tool that creates randomized yet balanced cat-themed dungeons with cozy nooks, climbing platforms, and perfect sunny spots for napping between adventures.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">WebGL</span>
+                            <span class="tech-tag">Algorithms</span>
+                            <span class="tech-tag">Level Design</span>
+                        </div>
+                        <a href="#" class="btn" style="margin-top: 1rem;">View Project</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="skills">
+        <div class="container">
+            <h2>Skills</h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3>🐱 Technical Skills</h3>
+                    <ul class="skill-list-simple">
+                        <li>
+                            <span class="paw-icon">🐾</span> C++ (Game Engine Development, Performance Optimization)
+                        </li>
+                        <li>
+                            <span class="paw-icon">🐾</span> C# (Unity Development, Game Systems)
+                        </li>
+                        <li>
+                            <span class="paw-icon">🐾</span> Python (Tools Development, AI Prototyping)
+                        </li>
+                        <li>
+                            <span class="paw-icon">🐾</span> Unity (C#, Custom Editors)
+                        </li>
+                        <li>
+                            <span class="paw-icon">🐾</span> OpenGL (Shader Programming)
+                        </li>
+                        <li>
+                            <span class="paw-icon">🐾</span> Unreal Engine (Blueprint, C++)
+                        </li>
+                        <li>
+                            <span class="paw-icon">🐾</span> Inkpot
+                        </li>
+                        <li>
+                            <span class="paw-icon">🐾</span> SQL
+                        </li>
+                        <li>
+                            <span class="paw-icon">🐾</span> Custom Engine Development
+                        </li>
+                        <li>
+                            <span class="paw-icon">🐾</span> Git Version Control
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>🐱 Practical Skills</h3>
+                    <ul class="skill-list-simple">
+                        <li>
+                            <span class="paw-icon">🐾</span> Gameplay Systems Architecture
+                        </li>
+                        <li>
+                            <span class="paw-icon">🐾</span> AI & Behavior Tree Design
+                        </li>
+                        <li>
+                            <span class="paw-icon">🐾</span> Optimization & Performance Tuning
+                        </li>
+                        <li>
+                            <span class="paw-icon">🐾</span> Procedural Content Generation
+                        </li>
+                        <li>
+                            <span class="paw-icon">🐾</span> Machine Learning
+                        </li>
+                        <li>
+                            <span class="paw-icon">🐾</span> Real-time Graphics Programming
+                        </li>
+                        <li>
+                            <span class="paw-icon">🐾</span> Communications
+                        </li>
+                        <li>
+                            <span class="paw-icon">🐾</span> Agile Development Practices
+                        </li>
+                        <li>
+                            <span class="paw-icon">🐾</span> Technical Documentation
+                        </li>
+                        <li>
+                            <span class="paw-icon">🐾</span> Cross-platform Development
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <style>
+            .skill-list-simple {
+                list-style-type: none;
+            }
+            
+            .skill-list-simple li {
+                margin-bottom: 0.8rem;
+                font-size: 1.1rem;
+                padding: 0.5rem 1rem;
+                background-color: rgba(233, 196, 106, 0.1);
+                border-radius: 8px;
+                transition: transform 0.2s, background-color 0.2s;
+                border-left: 3px solid var(--cat-accent);
+                box-shadow: 2px 2px 5px rgba(67, 49, 48, 0.1);
+            }
+            
+            .skill-list-simple li:hover {
+                transform: translateX(10px);
+                background-color: rgba(244, 162, 97, 0.15);
+                border-left: 3px solid var(--tan-accent);
+            }
+            
+            .paw-icon {
+                margin-right: 10px;
+                display: inline-block;
+            }
+        </style>
+    </section>
+     <section id="contact">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <p>Interested in working together or have questions about my <span style="color: var(--cat-accent);">projects</span> Feel free to reach out!</p>
+            <p>Email: samanthashomo1@gmail.com</p>
+            <div class="social-links">
+                <a href="https://github.com/SShomo" title="GitHub">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTIgMGMtNi42MjYgMC0xMiA1LjM3My0xMiAxMiAwIDUuMzAyIDMuNDM4IDkuOCA4LjIwNyAxMS4zODcuNTk5LjExMS43OTMtLjI2MS43OTMtLjU3N3YtMi4yMzRjLTMuMzM4LjcyNi00LjAzMy0xLjQxNi00LjAzMy0xLjQxNi0uNTQ2LTEuMzg3LTEuMzMzLTEuNzU2LTEuMzMzLTEuNzU2LTEuMDg5LS43NDUuMDgzLS43MjkuMDgzLS43MjkgMS4yMDUuMDg0IDEuODM5IDEuMjM3IDEuODM5IDEuMjM3IDEuMDcgMS44MzQgMi44MDcgMS4zMDQgMy40OTIuOTk3LjEwNy0uNzc1LjQxOC0xLjMwNS43NjItMS42MDQtMi42NjUtLjMwNS01LjQ2Ny0xLjMzNC01LjQ2Ny01LjkzMSAwLTEuMzExLjQ2OS0yLjM4MSAxLjIzNi0zLjIyMS0uMTI0LS4zMDMtLjUzNS0xLjUyNC4xMTctMy4xNzYgMCAwIDEuMDA4LS4zMjIgMy4zMDEgMS4yMy45NTctLjI2NiAxLjk4My0uMzk5IDMuMDAzLS40MDQgMS4wMi4wMDUgMi4wNDcuMTM4IDMuMDA2LjQwNCAyLjI5MS0xLjU1MiAzLjI5Ny0xLjIzIDMuMjk3LTEuMjMuNjUzIDEuNjUzLjI0MiAyLjg3NC4xMTggMy4xNzYuNzcuODQgMS4yMzUgMS45MTEgMS4yMzUgMy4yMjEgMCA0LjYwOS0yLjgwNyA1LjYyNC01LjQ3OSA1LjkyMS40My4zNzIuODIzIDEuMTAyLjgyMyAyLjIyMnYzLjI5M2MwIC4zMTkuMTkyLjY5NC44MDEuNTc2IDQuNzY1LTEuNTg5IDguMTk5LTYuMDg2IDguMTk5LTExLjM4NiAwLTYuNjI3LTUuMzczLTEyLTEyLTEyeiIvPjwvc3ZnPg==" alt="GitHub">
+                </a>
+                <a href="https://www.linkedin.com/in/samantha-shomo/" title="LinkedIn">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTkgMGgtMTRjLTIuNzYxIDAtNSAyLjIzOS01IDV2MTRjMCAyLjc2MSAyLjIzOSA1IDUgNWgxNGMyLjc2MiAwIDUtMi4yMzkgNS01di0xNGMwLTIuNzYxLTIuMjM4LTUtNS01em0tMTEgMTloLTN2LTExaDN2MTF6bS0xLjUtMTIuMjY4Yy0uOTY2IDAtMS43NS0uNzktMS43NS0xLjc2NHMuNzg0LTEuNzY0IDEuNzUtMS43NjQgMS43NS43OSAxLjc1IDEuNzY0LS43ODMgMS43NjQtMS43NSAxLjc2NHptMTMuNSAxMi4yNjhoLTN2LTUuNjA0YzAtMy4zNjgtNC0zLjExMy00IDB2NS42MDRoLTN2LTExaDN2MS43NjVjMS4zOTYtMi41ODYgNy0yLjc3NyA3IDIuNDc2djYuNzU5eiIvPjwvc3ZnPg==" alt="LinkedIn">
+                </a>
+                <a href="https://theredhollybush.itch.io/" title="Itch.io">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMy4xMzIgMS43NmMtLjg5MSAwLTEuODMxLjM5NS0yLjA5NSAxLjYxNS0uNDYzIDIuMTI1LS40NjMgMi4xMjUtLjY5NCA0LjYwMS0uNDYyIDQuOTk2LS4wOTIgNi4zMDkgMi41NTggNi40MDkgMi4xMjUgMCAxLjg5NC0xLjEwMiA0LjA1MS0xLjEwMiAyLjIyNSAwIDEuOTk1IDEuMTAyIDQuMDUyIDEuMTAyIDIuNjggMCAzLjAyLTEuNDEzIDIuNTU3LTYuNDA5LS4yMzEtMi40NzYtLjIzMS0yLjQ3Ni0uNjk0LTQuNjAxLS4yMzEtMS4yMi0xLjIwMy0xLjYxNS0yLjA5NS0xLjYxNS0xLjA1IDAtMS45ODUuMzQ0LTMuODIyIDEuOTMzLTEuNzQ2LTEuNTg5LTIuNzcyLTEuOTMzLTMuODIyLTEuOTMzem0yLjc3MSAxLjI3MjYyYy40MzEuMTI0NzggMS4zNDUuNjYwMTYgMi4wMyAxLjQxMzU1LjY4NS0uNzUzMzkgMS42LS4yMzEzOCAxLjk5OS0xLjQxMzU1LjEyMy0uMjQ3NTcuNjg1LjM3MTM2LjY4NS42MTg5NCAwIC4yNDc1OC0uNTU0IDEuMDg5MjktLjU1NCAxLjA4OTI5djMuOTIwMDRjMCAuMzA5NDcgMCAuNjE4OTQtLjEyMy45Mjg0LS4zMDggMS4yMzYyOS0xLjQwNyAxLjQyMjEtMS42NzYgMS40MjIxcy0xLjM2OS0uMTg1ODEtMS42NzYtMS40MjIxYy0uMTIzLS4zMDk0Ni0uMTIzLS42MTg5My0uMTIzLS45Mjg0di0zLjkyMDA0cy0uNTU0LS44NDE3MS0uNTU0LTEuMDg5MjljMC0uMjQ3NTguNTU0LS44NjY1MS42ODUtLjYxODk0em05LjA2MSAxLjM0NjFjLjgwMSAwIDEuNDQyLjY1OTQyIDEuNDQyIDEuNDY4NTIgMCAuODA5MDktLjY0MSAxLjQ2ODUyLTEuNDQyIDEuNDY4NTItLjgwMSAwLTEuNDQyLS42NTk0My0xLjQ0Mi0xLjQ2ODUyIDAtLjgwOTEuNjQxLTEuNDY4NTIgMS40NDItMS40Njg1MnoiLz48L3N2Zz4=" alt="Itch.io">
+                </a>
+            </div>
+        </div>
+    </section>
     <footer>
         <div class="container">
-            <p>&copy; 2025 Samantha Shomo. All rights <span style="color: var(--cat-accent);">reserved</span></p>
+            <p>&copy; 2025 Samantha Shomo. All rights <span style="color: var(--cat-accent);">researved</span></p>
         </div>
     </footer>
 </body>
